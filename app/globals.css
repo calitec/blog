@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-noto), 'Noto Sans KR', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 코드 하이라이팅 스타일 */
+.hljs {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto;
+}
+
+/* 프로즈 스타일 커스터마이징 */
+.prose {
+  @apply max-w-none;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.prose pre {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4;
+}
+
+.prose code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose img {
+  @apply rounded-lg;
+}
+
+.prose a {
+  @apply text-blue-600 dark:text-blue-400 no-underline hover:underline;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  @apply scroll-mt-24;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.prose h2 {
+  @apply mt-12 mb-4;
+  font-size: 1.5rem;
+}
+
+.prose h3 {
+  @apply mt-8 mb-3;
+  font-size: 1.25rem;
+}
+
+.prose p {
+  @apply mb-6;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-400 pl-4 italic text-gray-600 dark:text-gray-400;
+}
+
+.dark .prose {
+  @apply prose-invert;
+}
+
+/* 목차 스타일 */
+.toc-link {
+  @apply text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-150;
+}
+
+.toc-link.active {
+  @apply text-blue-600 dark:text-blue-400 font-medium;
+}
