@@ -54,6 +54,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1261297941647436"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${notoSansKR.variable} font-sans`}>
         <Analytics />
         <div className="flex flex-col min-h-screen">
